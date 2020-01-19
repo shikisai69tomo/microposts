@@ -18,6 +18,7 @@
     
       <li class="nav-item"><a href="<%= likes_user_path(@user) %>" class="nav-link <%= 'active' if current_page?(likes_user_path(@user)) %>">FavoritePosts<span class="badge badge-secondary"><%= @count_favorite_posts %></span></a></li>
 
+    
     </ul>
     <%= render 'users', users: @followers %>
   </div>

@@ -50,10 +50,4 @@ class User < ApplicationRecord
       self.favorite_posts.include?(micropost)
     end
     
-    #def feed_likes
-      #Micropost.where(user_id: self.favorite_ids + [self.id])
-    #end
-    
-    
-    
 end
