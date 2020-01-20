@@ -34,7 +34,7 @@ class User < ApplicationRecord
     
     
     has_many :favorites
-    has_many :favorite_posts, through: :favorites, source: :micropost
+    has_many :favorite_posts, through: :favorites, source: :micropost, dependent: :destroy
 
     def favorite(micropost)
       favorites.find_or_create_by(micropost_id: micropost.id)
